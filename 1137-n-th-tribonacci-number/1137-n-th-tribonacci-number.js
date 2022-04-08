@@ -11,7 +11,12 @@ var tribonacci = function(n) {
     let third = 1;
     
     for (let i = 3; i <= n; i++) {
-        [first, second, third] = [second, third, first + second + third];
+        let temp = first;
+        first = second;
+        second = third;
+        third = first + second + temp;
+        
+        // [first, second, third] = [second, third, first + second + third];
     }
     return third;
 };
