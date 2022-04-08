@@ -3,7 +3,7 @@
  * @return {number}
  */
 var maxSubArray = function(nums) {
-    let maxSum = -1e4-2;
+    let maxSum = -10000;
     let currSum = 0;
     
     for (let num of nums) {
