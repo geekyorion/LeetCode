@@ -4,11 +4,11 @@ SELECT
 FROM
     Customers
 WHERE NOT EXISTS
-    (
-        SELECT
-            customerId
-        FROM 
-            Orders
-        WHERE 
-            Orders.customerId = Customers.id
-    );
+(
+    SELECT
+        customerId
+    FROM 
+        Orders
+    WHERE 
+        Orders.customerId = Customers.id
+);
