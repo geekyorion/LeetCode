@@ -8,7 +8,7 @@ var moveZeroes = function(nums) {
     while (nums[last_pointer] === 0 && last_pointer >= first_pointer) {
         last_pointer--;
     }
-    while(first_pointer <= last_pointer) {
+    while(first_pointer < last_pointer) {
         if (nums[first_pointer] === 0) {
             nums.push(...nums.splice(first_pointer, 1));
             last_pointer--;
