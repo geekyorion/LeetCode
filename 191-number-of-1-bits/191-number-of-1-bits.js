@@ -13,7 +13,7 @@ var hammingWeight = function(n) {
     return count;
     
     // parse number to the binary number
-    return eval(n.toString(2).split('').join('+'));
+    // return eval(n.toString(2).split('').join('+'));
     
     // using logical AND
     let i = 0, ans = 0;
