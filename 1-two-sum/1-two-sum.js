@@ -13,15 +13,6 @@ var twoSum = function(nums, target) {
     }
 };
 
-// with simple object
-    // const obj = {};
-    // for (let i = 0; i < nums.length; i++) {
-    //     if(obj[target - nums[i]] >= 0) {
-    //         return [obj[target - nums[i]], i];
-    //     }
-    //     obj[nums[i]] = i;
-    // }
-
 // trying with brute force
     // for(let i = 0; i < nums.length; i++) {
     //     for(let j = i+1; j < nums.length; j++) {
