@@ -3,7 +3,7 @@
  * @return {number}
  */
 var climbStairs = function(n) {
-    const memo = { 1: 1, 2: 2, 3: 3 };
+    const memo = { 1: 1, 2: 2, 3: 3, 4: 5 };
     
     const climbAStair = (by, currentSteps) => {
         if (currentSteps in memo) return memo[currentSteps];
