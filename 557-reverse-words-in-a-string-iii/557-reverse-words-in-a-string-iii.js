@@ -3,6 +3,8 @@
  * @return {string}
  */
 var reverseWords = function(s) {
+    return s.split(' ').map(word => [...word].reverse().join('')).join(' ');
+    
     let ans = '', word = '';
     for (let char of s) {
         if (char === ' ') {
