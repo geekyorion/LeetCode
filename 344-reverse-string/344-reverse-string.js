@@ -3,10 +3,10 @@
  * @return {void} Do not return anything, modify s in-place instead.
  */
 var reverseString = function(s) {
-    s.reverse();
+    // s.reverse();
     
-    // let n = s.length;
-    // while(n--) {
-    //     s.splice(s.pop());
-    // }
+    let n = s.length + 1;
+    while(n--) {
+        s.splice(s.length - n, 0, s.pop());
+    }
 };
