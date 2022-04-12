@@ -19,7 +19,7 @@ var removeNthFromEnd = function(head, n) {
         if (n == 0) {
             node.next = node.next ? node.next.next : null;
         } else if (index === 0 && n === 1) {
-            // head should be removed
+            // head should point to next node
             head = head.next;
         }
     }
