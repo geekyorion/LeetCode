@@ -24,7 +24,6 @@ const addTwoNumbers = (l1, l2) => {
         currNode.val = sum % 10;
         const carryForward = ~~(sum / 10);
 
-        // edge condition
         if (!(l1.next === null && l2.next === null && carryForward === 0)) {
             currNode.next = getNode(carryForward);
             currNode = currNode.next;
