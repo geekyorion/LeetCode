@@ -17,8 +17,7 @@ const isValid = str => {
         if (char === '(' || char === '{' || char === '[') {
             stack.push(char);
         } else {
-            const opening = stack.pop();
-            if (opening !== brackets[char]) return false;
+            if (stack.pop() !== brackets[char]) return false;
         }
     }
     
