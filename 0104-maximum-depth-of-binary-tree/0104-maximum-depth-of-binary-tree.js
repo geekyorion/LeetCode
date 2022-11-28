@@ -20,6 +20,6 @@ const maxDepth = root => {
         checkDepth(root.right, currentDepth + 1);
     };
     checkDepth(root, 1);
-    
+
     return ans;
 };
