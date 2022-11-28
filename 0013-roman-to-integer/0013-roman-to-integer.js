@@ -16,49 +16,23 @@ const romanToInt = s => {
     };
     
     if (s in romans) return romans[s];
-    
-    let same = false;
-    let diff = false;
-    let char = s[0];
-    let skip = false;
-    let add = false;
+
+    let char = romans[s[0]];
     let ans = 0;
-    let currValue = romans[char];
     
     for (let i = 1; i < s.length; i++) {
-        if (skip) {
-            skip = false;
-            continue;
-        }
-
-        const currChar = s[i];
-        if (currChar === char) {
-            same = true;
+        const currChar = romans[s[i]];
+        if (char > currChar) {
+            ans += char;
+            char = currChar;
+        } else if (char < currChar) {
+            ans += (currChar - char);
+            char = romans[s[i + 1]] || 0;
+            i++;
         } else {
-            if (romans[char] < romans[currChar]) {
-                diff = true;
-            } else {
-                add = true;
-            }
-        }
-
-        if (same) {
-            currValue += romans[currChar];
-            char = currChar;
-            same = false;
-        } else if (diff) {
-            ans += (romans[currChar] - romans[char]);
-            char = s[i + 1];
-            currValue = romans[char] || 0;
-            skip = true;
-            diff = false;
-        } else if (add) {
-            ans += currValue;
-            char = currChar;
-            currValue = romans[char];
-            add = false;
+            ans += char;
         }
     }
 
-    return ans + currValue;
+    return ans + char;
 };
