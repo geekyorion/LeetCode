@@ -8,6 +8,7 @@ const getRow = rowIndex => {
 
     const ans = [1];
     let j = 1;
+
     for (; j < ~~((rowIndex + 2) / 2); j++) {
         const last = ans[j - 1];
         ans.push((last * (rowIndex - (j - 1)) / j));
