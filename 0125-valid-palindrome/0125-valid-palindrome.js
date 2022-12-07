@@ -28,6 +28,6 @@ const isPalindrome = s => {
         left++;
         right--;
     }
-    
+
     return true;
 };
