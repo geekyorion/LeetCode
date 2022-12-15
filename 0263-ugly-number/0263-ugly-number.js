@@ -5,17 +5,9 @@
 const isUgly = n => {
     if (n < 1) return false;
 
-    const checkWith = [2, 3, 5];
-    while (n > 1) {
-        let flag = false;
-        for (let num of checkWith) {
-            if (n % num === 0) {
-                flag = true;
-                n = n / num;
-                break;
-            }
-        }
-        if (!flag) return false;
-    }
-    return true
+    while (n % 5 === 0) n /= 5;
+    while (n % 3 === 0) n /= 3;
+    while (n % 2 === 0) n /= 2;
+
+    return n === 1;
 };
