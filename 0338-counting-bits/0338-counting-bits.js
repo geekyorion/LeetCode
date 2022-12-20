@@ -20,6 +20,6 @@ const countBits = n => {
             tempRange = range;
         }
     }
-    
+
     return ans;
 };
