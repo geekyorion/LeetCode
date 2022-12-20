@@ -11,31 +11,19 @@ const countBits = n => {
         ans[i] = ans[~~(i / 2)] + (i % 2);
     }
 
-    return ans;
-};
+//     let range = 2;
+//     let tempRange = 2;
+//     let currentNum = 1;
 
-/**
- * @param {number} n
- * @return {number[]}
- */
-const _countBits = n => {
-    if (n === 0) return [0];
-    if (n === 1) return [0, 1];
+//     for (let i = 2; i <= n; i++) {
+//         ans.push(ans[i - range] + 1);
+//         tempRange--;
 
-    const ans = [0, 1];
-    let range = 2;
-    let tempRange = 2;
-    let currentNum = 1;
-
-    for (let i = 2; i <= n; i++) {
-        ans.push(ans[i - range] + 1);
-        tempRange--;
-
-        if (tempRange === 0) {
-            range *= 2;
-            tempRange = range;
-        }
-    }
-
+//         if (tempRange === 0) {
+//             range *= 2;
+//             tempRange = range;
+//         }
+//     }
+    
     return ans;
 };
