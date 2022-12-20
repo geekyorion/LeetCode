@@ -7,7 +7,6 @@ const countBits = n => {
     if (n === 1) return [0, 1];
 
     const ans = [0, 1];
-
     for (let i = 2; i <= n; i++) {
         ans[i] = ans[~~(i / 2)] + i % 2;
     }
