@@ -17,6 +17,6 @@ const intersection = (nums1, nums2) => {
             hash[num] = true;
         }
     }
-    
+
     return  ans;
 };
