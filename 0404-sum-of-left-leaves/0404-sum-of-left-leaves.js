@@ -14,7 +14,7 @@ const sumOfLeftLeaves = root => {
     let answer = 0;
     const traverse = (node, shouldSum) => {
         if (!node.left && !node.right && shouldSum) {
-            answer += node.val;            
+            answer += node.val;
         }
         if (node.left) traverse(node.left, true);
         if (node.right) traverse(node.right, false);
