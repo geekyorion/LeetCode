@@ -2,7 +2,7 @@
  * @param {number[]} deck
  * @return {number[]}
  */
-const deckRevealedIncreasing = (deck) => {
+const deckRevealedIncreasing = deck => {
     const sorted_deck = deck.sort((a, b) => a - b);
     const n = sorted_deck.length;
     const answer = new Array(n);
