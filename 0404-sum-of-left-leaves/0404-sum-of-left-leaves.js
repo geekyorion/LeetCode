@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const sumOfLeftLeaves = (root) => {
+const sumOfLeftLeaves = root => {
     let answer = 0;
     const traverse = (node, shouldSum) => {
         if (!node.left && !node.right && shouldSum) {
