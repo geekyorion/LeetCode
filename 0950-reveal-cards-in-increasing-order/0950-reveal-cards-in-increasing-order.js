@@ -10,6 +10,7 @@ const deckRevealedIncreasing = deck => {
     let filled = 0;
     let current = 0;
     let skip = true;
+
     while (filled < n) {
         if (skip && !answer[current]) {
             answer[current] = sorted_deck[filled++];
